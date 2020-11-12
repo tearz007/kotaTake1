@@ -54,7 +54,6 @@ export class StartPageComponent implements OnInit {
     this.service.checkUser().subscribe(user => {
       this.users = user.email;
       this.login = "LogOut"
-      console.log(this.users)
     })
   }
 
