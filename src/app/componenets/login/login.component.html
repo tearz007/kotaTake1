@@ -1,0 +1,198 @@
+<div class="main" *ngFor="let item of items">
+  <div class="container">
+    <div class="signUpBck">
+      <div class="infor">
+        <span class="mat-display-2" style="
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+          ">Don't have an account?</span>
+        <br />
+        <br />
+        <button mat-raised-button (click)="toggle()" color="primary">
+          Signup
+        </button>
+      </div>
+
+      <div class="signup" [hidden]="isLogin">
+        <mat-form-field appearance="fill" mat-accent color="accent">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Enter your name" required />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill" mat-accent color="accent">
+          <mat-label>Surname</mat-label>
+          <input matInput placeholder="Enter your surname" required />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" mat-accent color="accent">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Enter your Home address" required />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" mat-accent color="accent">
+          <mat-label>UserName</mat-label>
+          <input matInput placeholder="Enter your user name" required [(ngModel)]="userEmail" />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" mat-accent color="accent">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Enter your password" required [(ngModel)]="userPass" />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+        <br />
+
+        <div class="creatBtn">
+          <button (click)="onCreate()" mat-raised-button color="accent">
+            Create Accont
+          </button>
+          <button class="exit" mat-raised-button color="primary" (click)="exit()">
+            Exit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="loginBck">
+      <div class="infor">
+        <span class="mat-display-3" style="
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+          ">Have an account?</span>
+        <br />
+        <br />
+        <button mat-raised-button (click)="toggle()" color="primary">
+          Login
+        </button>
+      </div>
+
+      <div class="login" [hidden]="isSignup">
+        <mat-form-field appearance="fill" mat-accent color="accent">
+          <mat-label>Email</mat-label>
+          <input matInput [formControl]="formControl" [(ngModel)]="userEmail" placeholder="Ex. tearz@example.com"
+            required />
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-error *ngIf="formControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+          <mat-error *ngIf="
+              formControl.hasError('email') && !formControl.hasError('required')
+            ">
+            Please enter a valid email address
+          </mat-error>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" mat-accent color="accent">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput [formControl]="fControl" [(ngModel)]="userPass"
+            placeholder="Enter your password" required />
+          <mat-icon matSuffix>no_encryption</mat-icon>
+          <mat-error *ngIf="fControl.hasError('required')">
+            Required
+          </mat-error>
+        </mat-form-field>
+        <br>
+        <div class="btn">
+          <button mat-raised-button color="accent" (click)="signIn()">
+            Login
+          </button>
+          <button mat-raised-button color="primary" (click)="exit()">
+            Exit
+          </button>
+        </div>
+
+        <div class="list">
+          <h3 style="color: gray">OR login with</h3>
+          <ul>
+            <li (click)="facebook()">
+              <mat-icon style="color: white; font-size: 35px">facebook</mat-icon>
+            </li>
+            <!-- <li><mat-icon color="primary">phone</mat-icon></li> -->
+            <li>
+              <mat-icon style="color: white" (click)="gmail()">g_translate</mat-icon>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+  login
+<div class="icon">
+          <img [src]=item.icon alt="LOGO" />
+        </div>
+         <div class="text">
+          <input
+            type="text"
+            placeholder="enter email"
+            [(ngModel)]="userEmail"
+          />
+        </div>
+        <div class="text">
+          <input
+            type="text"
+            placeholder="enter password"
+            [(ngModel)]="userPass"
+          />
+        </div>
+
+        sign_in
+<div class="text">
+          <label for="name">Name </label>
+          <br>
+          <input
+            type="text"
+            placeholder="enter name"
+            [(ngModel)]="Name"
+          />
+        </div>
+        <div class="text">
+           <label for="name">surname </label>
+          <br>
+          <input
+            type="text"
+            placeholder="enter surname"
+            [(ngModel)]="surname"
+          />
+        </div>
+        <div class="text">
+          <label for="name">phone number </label>
+          <br>
+          <input
+            type="text"
+            placeholder="enter phone number"
+            [(ngModel)]="phone_number"
+          />
+        </div>
+        <div class="text">
+          <label for="name">email </label>
+          <br>
+          <input
+            type="text"
+            placeholder="enter email"
+            [(ngModel)]="userEmail"
+          />
+        </div>
+        <div class="text">
+          <label for="name">password</label>
+          <br>
+          <input
+            type="text"
+            placeholder="enter password"
+            [(ngModel)]="userPass"
+          />
+        </div>
+
+
+-->

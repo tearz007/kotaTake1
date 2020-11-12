@@ -1,0 +1,89 @@
+<div class="main">
+  <div class="containe">
+    <div class="container">
+      <div class="menu">
+        <div class="collection">
+          <div class="one" *ngFor="let item of items; let index = i">
+            <div class="img">
+              <img [src]="item.image" alt="" />
+            </div>
+
+            <div class="product">
+              <div class="left">
+                <span class="mat-display-1" style="color: forestgreen">{{
+                  item.name
+                }}</span>
+                <br />
+                <span style="text-transform: uppercase; text-decoration: underline">ingrediens</span>
+                <ul>
+                  <li>chips</li>
+                  <li>russien</li>
+                  <li>letties</li>
+                  <li>Cheese</li>
+                </ul>
+              </div>
+              <div class="right">
+                <h1>{{ "Price:R" + item.price }}</h1>
+                <button mat-raised-button style="background-color: forestgreen; color: black"
+                  (click)="addCount(item.id)">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collection">
+          <div class="one" *ngFor="let item of sanguges">
+            <div class="img">
+              <img [src]="item.image" alt="" />
+            </div>
+
+            <div class="product">
+              <div class="left">
+                <span class="mat-display-1" style="color: forestgreen">{{
+                  item.name
+                }}</span>
+                <br />
+                <span style="text-transform: uppercase; text-decoration: underline">ingrediens</span>
+                <ul>
+                  <li>chips</li>
+                  <li>russien</li>
+                  <li>letties</li>
+                  <li>Cheese</li>
+                </ul>
+              </div>
+              <div class="right">
+                <h1>{{ "Price:R" + item.price }}</h1>
+                <button mat-raised-button style="background-color: forestgreen; color: black"
+                  (click)="addCount(item.id)">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="nav">
+      <div class="log">
+        <span class="mat-display-3" style="color: forestgreen">.</span
+        ><span class="mat-display-3">KaziKOTa</span>
+                            </div>
+
+                            <div class="title">
+                                <span class="mat-display-3">Menu</span>
+                            </div>
+
+                            <div class="btn">
+                                <button mat-raised-button color="accent" (click)="toHome()">
+          Home
+        </button>
+                                <button mat-raised-button style="background-color: forestgreen; color: black" (click)="toCard()">
+          Card[ {{ item_num }} ]
+        </button>
+                            </div>
+                        </div> -->

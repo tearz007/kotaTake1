@@ -1,0 +1,81 @@
+<div class="main">
+    <div class="container">
+        <div class="nav">
+            <div class="title">
+                <span class="mat-display-3">Card</span>
+            </div>
+        </div>
+
+        <div class="collection">
+            <div class="items" [hidden]="isHiddent2">
+                <div class="item_Group" *ngFor="let item of card">
+                    <div class="img">
+                        <img [src]="item.image" alt="" />
+                    </div>
+                    <div class="infor">
+                        <div class="left">
+                            <span class="mat-display-1" style="color: forestgreen">{{
+                item.name
+              }}</span>
+                            <br />
+                            <br />
+                            <span style="text-transform: uppercase; text-decoration: underline">ingrediens</span
+              >
+              <ul>
+                <li>chips</li>
+                <li>russien</li>
+                <li>letties</li>
+                <li>Cheese</li>
+              </ul>
+            </div>
+
+            <div class="right">
+              <h1>{{ "Price:R" + item.price }}</h1>
+              <button
+                id="btn1"
+                (click)="deleter(item.id)"
+                class="delete"
+                mat-raised-button
+                style="background-color: rgb(238, 5, 5, 0.7); color: black"
+              >
+                Delete
+              </button>
+              <button
+                id="btn2"
+                (click)="tomenu()"
+                class="delete"
+                mat-raised-button
+                style="background-color: forestgreen; color: black"
+              >
+                ShopMore
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="itemsTop" [hidden]="isHiddent">
+        <div class="contain">
+          <div class="mat-display-3">Card is empty</div>
+          <div>
+            <button mat-raised-button color="accent" (click)="toHome()">
+              Home
+            </button>
+            <button mat-raised-button color="primary" (click)="tomenu()">
+              Menu
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <span class="mat-display-2"> Order summary</span>
+                            <div class="sum">
+                                <h2>Total Items : {{ itemCd.length }}</h2>
+                                <h2>Total Price : R{{ ptPrice }}</h2>
+                                <button mat-raised-button color="primary">CheckOut</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
