@@ -1,7 +1,3 @@
-<div   onload="setTimeout(onLoad(), 3000)">
-<div class="spinner" ></div>
-</div>
-
 <div *ngFor="let item of items">
   <div class="main-collection">
     <div class="containe">
@@ -9,7 +5,6 @@
         <div class="log">
           <span class="mat-display-3" style="color: forestgreen">.</span><span class="mat-display-3">KaziKOTa</span>
         </div>
-
         <div class="search">
           <span><input type="text" name="" value="" /><span class="searchText">search<i>
                 <mat-icon class="icon" style="background-color: forestgreen">search</mat-icon>
@@ -49,6 +44,12 @@
     </div>
   </div>
 </div>
+ <div class="spainContainer">
+  <div class="spinner" ></div>
+  </div>  
 
+
+  <!--      -->
+  
 <app-menu></app-menu>
 <router-outlet></router-outlet>

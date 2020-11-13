@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: fuchsia;
+    position: relative;
 }
 
 .containe {
@@ -25,7 +26,7 @@
     padding-top: 50px;
     padding-bottom: 40px;
     //position: sticky;
-    position: fixed;
+  //  position: fixed;
     top: 2px;
     background-color: rgb(0, 0, 0, 0.3);
     .log {
@@ -75,7 +76,7 @@
     height: 520px;
     width: 100%;
     // padding-top: 140px;
-    padding-top: 10%;
+    padding-top: 4%;
 }
 
 .menu_collection {
@@ -135,15 +136,38 @@
 
 
 /****************************************/
-
+.spainContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
+    //position: relative;
+    
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: all 7s ease-in-out;
+}
+.div_finished{
+    opacity: 0;
+   // width: 0%;
+  //  height: 0px;
+    pointer-events: none;
+}
 .spinner {
-    width: 40px;
-    height: 40px;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: 70px;
+    height: 70px;
     background-color: #333;
   
     margin: 100px auto;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
+    opacity: 5;
+    transition:  opacity 7s ease-in-out;
   }
   
   @-webkit-keyframes sk-rotateplane {
@@ -164,3 +188,9 @@
       -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     }
   }
+  .preload_finished{
+      opacity: 0;
+      pointer-events: none;
+  }
+
+/*------------------------------------------------------------------------*/

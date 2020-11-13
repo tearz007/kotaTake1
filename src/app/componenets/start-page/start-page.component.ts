@@ -19,8 +19,6 @@ export class StartPageComponent implements OnInit {
   login
   users
   num = 0;
-  isdisabled=true
-  
   
   constructor(private route: Router, private service: ServiseService, public dataS: DataService) {
     this.item_num = this.dataS.itemId.length;
@@ -29,6 +27,15 @@ export class StartPageComponent implements OnInit {
     if (!this.users) {
       this.login = "Login"
     }
+
+    window.addEventListener('load',()=>{
+      const preload=document.querySelector('.spinner');
+      //const preload=document.querySelector('.sk-circle');
+      const preloadDiv=document.querySelector('.spainContainer');
+      preload.classList.add('preload_finished');
+      preloadDiv.classList.add('div_finished');
+      
+    })
   }
   ngOnInit(): void {
     this.dataS.getBackground().subscribe(item_data => {
@@ -41,15 +48,7 @@ export class StartPageComponent implements OnInit {
      
     })
   }
-
-  onLoad(){
-    this.isdisabled=false
-    alert(this.isdisabled)
-  }
   
-
-
-
   view() {
     this.service.checkUser().subscribe(user => {
       this.users = user.email;
