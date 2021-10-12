@@ -1,57 +1,72 @@
-<div *ngFor="let item of items">
-  <div class="main-collection">
-    <div class="containe">
-      <div class="nav">
-        <div class="log">
-          <span class="mat-display-3" style="color: forestgreen">.</span><span class="mat-display-3">KaziKOTa</span>
-        </div>
-        <div class="search">
-          <span><input type="text" name="" value="" /><span class="searchText">search<i>
-                <mat-icon class="icon" style="background-color: forestgreen">search</mat-icon>
-              </i></span></span>
-        </div>
+<div class="toolbar">
+  <div class="raw">
 
-        <div class="btn">
-          <button mat-raised-button color="accent" (click)="loginFunction()">
-            {{ login }}
-          </button>
-          <button mat-raised-button style="background-color: forestgreen; color: black" (click)="toCard()">
-            Card[ {{ dataS.itemId.length }} ]
-          </button>
-        </div>
-      </div>
-
-      <div class="menu">
-        <div class="menu_collection">
-          <div class="selectMenu">
-            <div class="mat-display-2 title_catego" style="font-family: 'Times New Roman', Times, serif">
-              Categories
-            </div>
-
-            <div class="list">
-              <ul>
-                <li class="active">Home</li>
-                <li (click)="tomenu()">Menu</li>
-                <li class="dis">Daily promotions</li>
-                <li class="dis">About</li>
-                <li class="dis">contact</li>
-              </ul>
-            </div>
-          </div>
-          <div class="display"></div>
-        </div>
-      </div>
+    <div class="log">
+      <span class="mat-display-2" style="color: forestgreen">.</span><span class="mat-display-2">KaziKOTa</span>
     </div>
-  </div>
+
+    <div class="list">
+      <ul>
+        <li class="active"><a class="material-icons">
+          Home</a></li>
+        <li (click)="tomenu()"><a>Menu</a></li>
+        <!-- <li (click)="toCard()"> <a>Card[ {{ dataS.itemId.length }} ]</a></li> -->
+        <li class="dis"> <a>About</a></li>
+        <li class="dis"> <a>contact</a></li>
+      </ul>
+    </div>
+
+    <div class="btn">
+      <button mat-raised-button color="accent" (click)="loginFunction()">
+        {{ login }}
+      </button>
+
+      <button mat-raised-button style="background-color: forestgreen;" (click)="toCard()">
+        Card[ {{ dataS.itemId.length }} ]
+      </button>
+    </div>
+
+  </div> 
+
 </div>
 
-
- <div class="spainContainer">
-  <div class="spinner" ></div>
-  </div>  
-
-
-  <!--  <app-menu></app-menu>    -->
+<div class="header">
   
+    <div>
+
+      <h1>Welcome to KaziKoTa</h1>
+
+     </div>
+
+</div>
+
+   <app-menu></app-menu>   
+
+   <footer>
+    <div class="container">
+        <div class="row px-md-3">
+
+            <div class="footers">
+                <h5>Contact</h5>
+
+                <a href="#" class="footer-link"> 067-901-0000</a> <br>
+                <a href="#" class="footer-link">Kazikota@yahoo.com</a>
+
+                <h5 class="mt-3">Social Media</h5>
+                <div class="footer-sosmed mt-3">
+                    <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-google-plus-g"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
+                    <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+
+    </div>
+</footer>
 
 <router-outlet></router-outlet>

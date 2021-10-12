@@ -10,6 +10,7 @@ import { CardComponent } from './componenets/card/card.component';
 const routes: Routes = [
   { path: 'card', component: CardComponent },
   { path: '', component: StartPageComponent },
+  { path: 'home', component: StartPageComponent },
   { path: 'menu', component: MenuComponent},
   { path: 'login', component: LoginComponent }
 

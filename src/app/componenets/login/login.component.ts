@@ -46,7 +46,10 @@ export class LoginComponent implements OnInit {
 
 
 
-  constructor(private service: ServiseService, private dataS: DataService, private auth: AngularFireAuth, private afs: AngularFirestore,
+  constructor(private service: ServiseService, 
+  private dataS: DataService, 
+  private auth: AngularFireAuth, 
+  private afs: AngularFirestore,
     private router: Router) {
 
     this.userL = this.auth.authState.pipe(
@@ -106,7 +109,7 @@ export class LoginComponent implements OnInit {
   }
 
   tomenu() {
-    this.router.navigate(['menu']);
+    this.router.navigate(['home']);
   }
 
 

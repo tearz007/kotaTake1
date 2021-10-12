@@ -7,6 +7,7 @@ import { ServiseService } from '../../services/servise.service';
 
 
 
+
 @Component({
   selector: 'app-start-page',
   templateUrl: './start-page.component.html',

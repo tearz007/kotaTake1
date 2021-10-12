@@ -78,7 +78,7 @@ export class CardComponent implements OnInit {
   }
 
   tomenu() {
-    this.route.navigate(['menu']);
+    this.route.navigate(['home']);
   }
 
   toHome() {
