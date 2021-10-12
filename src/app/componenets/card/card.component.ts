@@ -20,7 +20,7 @@ export class CardComponent implements OnInit {
   item_num = 0;
   isHiddent = true
   isHiddent2 = false
-  constructor(private service: ServiseService, private dataS: DataService, private route: Router) {
+  constructor(private service: ServiseService, public dataS: DataService, private route: Router) {
     this.itemCd = this.dataS.itemId;
     this.item_num = this.dataS.itemId.length;
     this.hidden()

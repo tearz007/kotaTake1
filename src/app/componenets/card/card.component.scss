@@ -1,53 +1,91 @@
 * {
     margin: 0px;
     padding: 0px;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
+    box-sizing:border-box;
+
+}
+
+
+/******************** Nev Start *********************/
+.raw{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+
+    .log {
+        span {
+            font-family: 'Times New Roman', Times, serif;
+            cursor:pointer;
+        }
+    }
+
+    .list{
+      list-style:none; 
+    }
+
+    li,a, {
+        font-family:"Montserrat",sans-serif;
+        font-weight:500;
+        font-size:16px;
+        text-decoration:none;
+    }
+
+    .list li{
+        display:inline-block;
+        padding:0 20px;
+        cursor:pointer;
+
+        a{
+            transition:all 0.3s ease 0s;
+        }
+
+        a:hover{
+            color:forestgreen;
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        button {
+            margin-right: 20px;
+            width: 100px;
+            font-family: 'Times New Roman', Times, serif;
+            transition:all 0.3s ease 0s;
+        }
+
+        .profile_img{
+            border-radius:50%;
+        }
+
+        button:hover {
+            color:white;
+        }
+    }
+
 }
 
 .main {
-    width: 100%;
-    height: 3000px;
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/kotatake1.appspot.com/o/kotaTake1%2Ffood-background.jpg?alt=media&token=890ece69-c5eb-425e-8265-f715453e94b1');
-    //background-repeat:no-repeat;
-    background-size: cover;
-    background-color: forestgreen;
+    width: 100%;  
+    background-image:url("../../imgs/background.jpg");
+    background-repeat:none;
+    background-size:cover;
+    background-position:center;
 }
 
 .container {
-    width: 100%;
-    height: 2800px;
-    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;   
+    
+    // background-color: rgb(0, 0, 0, 0.5);
     margin: auto;
     text-align: center;
-    align-items: center;
     border-radius: 20px;
 }
 
-.nav {
-    //background-color: aqua;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: rgb(0, 0, 0, 0.3);
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    border-radius: 20px;
-    // position: sticky;
-    // top: 10px;
-    .title {
-        margin: auto;
-        text-align: center;
-        align-items: center;
-        display: inline-block;
-        width: 35%;
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-        span {
-            font-size: 110px;
-            font-family: 'Times New Roman', Times, serif;
-        }
-    }
+.collection{
+    
+    min-height:90vh;
+    overflow:scroll;
 }
 
 
@@ -55,7 +93,6 @@
 
 .collection {
     width: 100%;
-    height: 100%;
     border-radius: 20px;
     padding: 10px;
     display: inline-flex;

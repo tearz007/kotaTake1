@@ -53,6 +53,7 @@ export class MenuComponent implements OnInit {
         console.log(this.state);
         this.dataS.setid(id);
         this.item_num=this.dataS.itemId.length;
+        alert("Added to card")
      }else{
        this.route.navigate(['login'])
      }

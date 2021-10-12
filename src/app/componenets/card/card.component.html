@@ -1,11 +1,37 @@
-<div class="main">
-  <div class="container">
-    <div class="nav">
-      <div class="title">
-        <span class="mat-display-3">Card</span>
-      </div>
+<div class="toolbar">
+  <div class="raw">
+
+    <div class="log">
+      <span class="mat-display-2" style="color: forestgreen">.</span><span class="mat-display-2">KaziKOTa</span>
     </div>
 
+    <div class="list">
+      <ul>
+        <li class="active"><a class="material-icons">
+          Home</a></li>
+        <li (click)="tomenu()"><a>Menu</a></li>
+        <li class="dis"> <a>About</a></li>
+        <li class="dis"> <a>contact</a></li>
+      </ul>
+    </div>
+
+    <div class="btn">
+      <button mat-raised-button color="accent">
+        Login
+      </button>
+
+      <button mat-raised-button style="background-color: forestgreen;">
+        Card[ {{ dataS.itemId.length }} ]
+      </button>
+    </div>
+
+  </div> 
+
+</div>
+
+
+<div class="main">
+  <div class="container">
     <div class="collection">
       <div class="items" [hidden]="isHiddent2">
         <div class="item_Group" *ngFor="let item of card">
